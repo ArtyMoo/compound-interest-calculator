@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+#calculator * {
+    padding: 0;
+    margin: 0 auto;
+    width: 75%;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  #calculator .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #calculator .calculator {
+      width: 100%;
+    color: #000;
+  }
+  
+  #calculator .heading h3 {
+    font-size: 25px;
+    color: #000;
+  }
+  #calculator #message {
+    font-size: 20px;
+    color: #000;
+  }
+  
+  #calculator .input-group {
+      width: 95%;
+    position: relative;
+    margin: 20px 0;
+    float: left; 
+    width: 50%;
+    padding: 5px;
+  }
+  
+  #calculator .input-group label {
+    display: block;
+  }
+  
+  #calculator .input-group input,
+  #calculator .input-group button {
+      width: 95%;
+    padding: 9px;
+    border: 0;
+    outline: none;
+    margin-left: 5px;
+    margin-top: 2px;
+    background-color: #fff;
+  }
+  
+  #calculator .input-group select {
+      width: 95%;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    margin-left: 5px;
+    margin-top: 2px;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+  }
+  
+  #calculator .input-group button {
+    background-color: #871039;
+    color: #fff;
+  }
+  
+  #calculator .chart {
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #calculator .input {
+    border: 1px solid #ededed;
+    border-radius: 5px;
+  }
+  
+  #calculator .input select{
+    border: 0;
+  }
+  
+  #calculator .symbol {
+    position: absolute;
+    top: 52%;
+    width: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 14px;
+  }
+  
+  #calculator canvas {
+    height: 500px !important;
+  }
+  
+  #calculator .results {
+    text-align: left;
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (max-width: 576px) { 
+  
+    #calculator .container {
+      margin: 10px;
+    }
+    
+    #calculator .input-group {
+      width: 100%;
+    }
+  
+    #calculator .input-group input,
+    #calculator .input-group button,
+    #calculator .input-group select {
+      width: 75%;
+      padding: 12px;
+    }
+  
+    #calculator .chart {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+  
+    #calculator canvas {
+      height: 400px !important;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (max-width: 992px) {
+    #calculator .chart {
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
+  }

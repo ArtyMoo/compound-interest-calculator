@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Compound Interest Calcualtor</title>
+</head>
+<body>
+    <section id="calculator"  class="container">
+        <div class="calculator">
+            <div class="heading">
+                <h3>Compound interest calculator</h3>
+            </div>
+            <form class="compound-form">
+                <div class="input-group" required="true">
+                    <label for="initialamount">Initial amount</label>
+                    <div class="input">
+                        <span class="symbol">€</span>
+                        <input type="text" inputmode="numeric" id="initialamount" placeholder="0" onClick="this.select();"/>
+                    </div>
+                </div>
+                <div class="input-group" required="true">
+                    <label for="years">Investment years</label>
+                    <div class="input">
+                        <span class="symbol"></span>
+                        <input type="text" inputmode="numeric" id="years" value="10" placeholder="0" onClick="this.select();"/>
+                    </div>
+                </div>
+                <div class="input-group" required="true">
+                    <label for="regularDeposit">Regular deposit</label>
+                    <div class="input">
+                        <span class="symbol">€</span>
+                        <input type="text" inputmode="numeric" id="regularDeposit" placeholder="0" onClick="this.select();"/>
+                    </div>
+                </div>
+                
+                <div class="input-group" required="true">
+                    <label for="depositFrequency">Deposit frequency</label>
+                    <div class="input">
+                        <select id="depositFrequency">
+                            <option value="1">Annualy</option>
+                            <option value="12" selected>Monthly</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-group" required="true">
+                    <label for="rates">Estimated rates (max 20%)</label>
+                    <div class="input">
+                        <span class="symbol">%</span>
+                        <input type="text" inputmode="numeric" id="rates" value="5" max="20" placeholder="0" onClick="this.select();"/>
+                    </div>
+                </div>
+                <div class="input-group" required="true">
+                    <label for="rates">Compound interval</label>
+                    <div class="input">
+                        <select id="compound" value="2">
+                            <option value="1">Annualy</option>
+                            <option value="12" selected>Monthly</option>
+                            <option value="26">Fortnightly</option>
+                            <option value="52">Weekly</option>
+                            <option value="365">Daily</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="chart">
+            <h3 id="message">Results</h3>
+            <canvas id="data-set"></canvas>
+        </div>
+        <div class="results">
+            <p id="initial-deposit"></p>
+            <p id="regular-deposit"></p>
+            <p id="total-interest"></p>
+            <p id="total-savings"></p>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
